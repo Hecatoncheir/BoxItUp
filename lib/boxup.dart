@@ -1,6 +1,7 @@
 library boxup;
 import 'dart:html';
 
+part 'realization.dart';
 
 class BoxUp {
   List BoxElements;
@@ -25,14 +26,4 @@ class BoxLinks {
 
     addEventsForBoxLinks(Links);
   }
-}
-
-
-function boxTargetsDown(List boxElements){
-  boxElements.forEach((element){
-    element.style.display = 'none';
-  });
-}
-
-function addEventsForBoxLinks(List boxLinks){
 }
