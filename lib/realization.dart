@@ -6,7 +6,14 @@ function boxTargetsDown(List boxElements){
   });
 }
 
-function addEventsForBoxLinks(List boxLinks){
-//  int iterator;
-//  for(var iterator = 0; )
+function boxTargetUp(int index, List boxElements){
+  boxElements[index].style.display = 'block';
+}
+
+function addEventsForBoxLinks(List boxLinks, BoxUp box){
+  for(int iterator = 0; iterator < boxLinks.length; iterator++ ){
+    boxLinks[iterator].onClick.listen((){
+      box.BoxItUp(iterator);
+    });
+  }
 }

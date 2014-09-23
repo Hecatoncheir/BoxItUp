@@ -5,14 +5,18 @@ part 'realization.dart';
 
 class BoxUp {
   List BoxElements;
-  BoxUp( ElementList this.BoxElements ){
+  BoxUp( List this.BoxElements ){
     boxTargetsDown(BoxElements);
+  }
+  BoxItUp(int index){
+    boxTargetUp(index, BoxElements);
   }
 }
 
 class BoxLinks {
   List Links;
   List Targets;
+  BoxUp Box;
 
   BoxLinks(String elements){
     this.Links = querySelectorAll('$elements');
@@ -24,6 +28,8 @@ class BoxLinks {
       this.Targets.add(targetElement);
     });
 
-    addEventsForBoxLinks(Links);
+    this.Box = new BoxUp(Targets);
+    addEventsForBoxLinks(Links, Box);
   }
+
 }
