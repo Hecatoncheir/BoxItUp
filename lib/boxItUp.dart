@@ -1,7 +1,8 @@
 library boxItUp;
 import 'dart:html';
 
-part 'box_realization.dart';
+part 'box_elements_realization.dart';
+part 'boxItUp_frame.dart';
 
 abstract class BoxElements {
   List ElementsBox;
@@ -10,14 +11,36 @@ abstract class BoxElements {
 
 class Box implements BoxElements {
 
+  BoxFrame boxFrame;
   List ElementsBox;
   List TargetsBox;
   
   Box(String elementName){
+    this.boxFrame = new BoxFrame();
     this.ElementsBox = querySelectorAll('$elementName');
     this.TargetsBox = TargetsElements(ElementsBox);
     ShutDownTargets(TargetsBox);
-    AddLinksEvents(ElementsBox, TargetsBox);
+    HandleLinksEvents(ElementsBox, TargetsBox, boxFrame);
+    HandleBoxFrameEvents(boxFrame);
   }
 
+}
+
+
+class BoxFrame {
+
+  Element body;
+  DivElement BoxItUpOverlay;
+  DivElement BoxIt;
+  
+  BoxFrame(){
+  
+  _addStyleLink();
+  
+  this.body = querySelector('body');
+  this.BoxItUpOverlay = addBoxOverlay(body);
+  this.BoxIt = addBoxItDiv(body);
+   
+ }
+  
 }
