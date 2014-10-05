@@ -46,13 +46,17 @@ void HandleLinksEvents(List links, List targets, box){
 //Показывается элемент ссылка на который была нажата
 
 void BoxItUp(Element target, box){
+  
+  box.BoxIt.append(target);
+  target.style.display = 'block';
 
   box.BoxItUpOverlay.style
     ..opacity = '0.5'
     ..display = 'block';
+    
   box.BoxIt.style
     ..height = 'auto'
     ..opacity = '1';
-  
-  target.style.display = 'block';
+    
+  box.BoxIt.classes.add('BoxItAnimate');
 }

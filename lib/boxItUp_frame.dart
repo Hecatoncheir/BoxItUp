@@ -40,6 +40,9 @@ DivElement addBoxItDiv(body){
 HandleBoxFrameEvents(box){
 
   box.BoxItUpOverlay.onClick.listen((event){
+    
+    box.BoxIt.nodes = [];
+    
     event.target.style
       ..opacity = '0'
       ..display = 'none';
@@ -47,6 +50,8 @@ HandleBoxFrameEvents(box){
     box.BoxIt.style
     ..opacity = '0'
     ..height = '0';
+    
+    box.BoxIt.classes.remove('BoxItAnimate');
   });
   
 }

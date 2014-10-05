@@ -1,6 +1,7 @@
 body {
   background: #eaebed;
   color: #3f4437;
+  min-height: 400px;
 }
 
 a {
