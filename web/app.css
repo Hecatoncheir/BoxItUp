@@ -6,4 +6,25 @@ body {
 
 a {
   color: #4f5f6d;
+  text-decoration: none;
+  margin: 5px;
+  display: block;
+}
+
+section {
+  width: 80%;
+  margin: 0 auto;
+}
+
+h1 {
+  color: #5c6a83;
+  text-align: center;
+}
+
+.main-body {
+  background: #fff;
+  border-radius: 6px;
+  border: 1px solid #cdcbce;
+  color: #cdcbce;
+  padding: 20px;
 }

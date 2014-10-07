@@ -1,2 +1,3 @@
-boxItUp.esproj
 .idea
+build
+*.esproj

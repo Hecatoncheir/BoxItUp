@@ -28,7 +28,7 @@ DivElement addBoxOverlay(body){
 DivElement addBoxItDiv(body){
 
   DivElement BoxIt = new DivElement();
-  BoxIt.className = 'boxIt';
+  BoxIt.className = 'boxIt animated';
   
   body.append(BoxIt);
 
@@ -51,7 +51,7 @@ HandleBoxFrameEvents(box){
     ..opacity = '0'
     ..height = '0';
     
-    box.BoxIt.classes.remove('BoxItAnimate');
+    box.BoxIt.classes.remove('rubberBand');
   });
   
 }
