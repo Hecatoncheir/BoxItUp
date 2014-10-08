@@ -40,6 +40,8 @@ DivElement addBoxItDiv(body){
 HandleBoxFrameEvents(box){
 
   box.BoxItUpOverlay.onClick.listen((event){
+  
+    event.preventDefault();
     
     box.BoxIt.nodes = [];
     
