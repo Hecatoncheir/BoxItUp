@@ -32,6 +32,8 @@ void HandleLinksEvents(List links, List targets, box){
   
   links.forEach((link){
     link.onClick.listen((event){
+    
+      event.preventDefault();
       var linkIndex = links.indexOf(event.target);
       
       var target = targets[linkIndex];

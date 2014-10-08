@@ -1,7 +1,8 @@
 .idea
 build/
 *.esproj
-boxItUp.esproj/
+boxItUp.esproj/*
+boxItUp.esproj/user.Vitaliy.espressostorage
 pubspec.lock
 
 packages
