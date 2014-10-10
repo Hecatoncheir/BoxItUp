@@ -15,8 +15,8 @@ class Box implements BoxElements {
   List ElementsBox;
   List TargetsBox;
   
-  Box(String elementName){
-    this.boxFrame = new BoxFrame();
+  Box(String elementName, {String animationOpen: 'openBox'}){
+    this.boxFrame = new BoxFrame(animationOpen);
     this.ElementsBox = querySelectorAll('$elementName');
     this.TargetsBox = TargetsElements(ElementsBox);
     ShutDownTargets(TargetsBox);
@@ -32,11 +32,13 @@ class BoxFrame {
   Element body;
   DivElement BoxItUpOverlay;
   DivElement BoxIt;
+  String animationClassName;
   
-  BoxFrame(){
+  BoxFrame(String animation){
   
   _addStyleLink();
   
+  this.animationClassName = animation;
   this.body = querySelector('body');
   this.BoxItUpOverlay = addBoxOverlay(body);
   this.BoxIt = addBoxItDiv(body);

@@ -60,5 +60,5 @@ void BoxItUp(Element target, box){
     ..height = 'auto'
     ..opacity = '1';
     
-  box.BoxIt.classes.add('rubberBand');
+  box.BoxIt.classes.add(box.animationClassName);
 }

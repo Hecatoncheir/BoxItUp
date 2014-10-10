@@ -53,7 +53,7 @@ HandleBoxFrameEvents(box){
     ..opacity = '0'
     ..height = '0';
     
-    box.BoxIt.classes.remove('rubberBand');
+    box.BoxIt.classes.remove(box.animationClassName);
   });
   
 }
