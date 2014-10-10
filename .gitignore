@@ -12,3 +12,6 @@ packages
 *.js_
 *.js.deps
 *.js.map
+boxItUp.esproj/user.Vitaliy.espressostorage
+
+packages/browser
