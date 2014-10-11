@@ -50,8 +50,8 @@ HandleBoxFrameEvents(box){
       ..display = 'none';
       
     box.BoxIt.style
-    ..opacity = '0'
-    ..height = '0';
+      ..opacity = '0'
+      ..height = '0';
     
     box.BoxIt.classes.remove(box.animationClassName);
   });
