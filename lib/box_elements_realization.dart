@@ -6,9 +6,13 @@ List TargetsElements(List elementsBox){
   List targetsBox = new List();
   
   elementsBox.forEach((element){
-    var targetLink = element.getAttribute('href');
-    var target = querySelector('$targetLink');
-    targetsBox.add(target);      
+  
+  var targetLink = element.getAttribute('href');
+  
+    if (!targetLink.startsWith('http://')) {
+      var target = querySelector('$targetLink');
+      targetsBox.add(target);  
+    }
   });
   
   return targetsBox;
@@ -31,9 +35,23 @@ void ShutDownTargets(List targets){
 void HandleLinksEvents(List links, List targets, box){
   
   links.forEach((link){
+    int otherLinksInt = 0;
+  
     link.onClick.listen((event){
+    event.preventDefault();
     
-      event.preventDefault();
+    // Внешние ссылки
+    if (event.target.href.startsWith('http://')) {
+      
+      var HttpTarget = '${event.target.href}';
+      DivElement otherLinksDiv = new DivElement();
+      otherLinksDiv.className = 'otherTarget_${otherLinksInt}';
+      otherLinksDiv.appendHtml('<iframe src="${HttpTarget}" frameborder="0" allowfullscreen></iframe>');
+      BoxItUp(otherLinksDiv, box);
+      otherLinksInt++;
+			
+    }
+    
       var linkIndex = links.indexOf(event.target);
       
       var target = targets[linkIndex];
