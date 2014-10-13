@@ -35,20 +35,19 @@ void ShutDownTargets(List targets){
 void HandleLinksEvents(List links, List targets, box){
   
   links.forEach((link){
-    int otherLinksInt = 0;
   
     link.onClick.listen((event){
     event.preventDefault();
     
     // Внешние ссылки
-    if (event.target.href.startsWith('http://')) {
+    if (event.target.type.contains('external')) {
       
       var HttpTarget = '${event.target.href}';
-      DivElement otherLinksDiv = new DivElement();
-      otherLinksDiv.className = 'otherTarget_${otherLinksInt}';
-      otherLinksDiv.appendHtml('<iframe src="${HttpTarget}" frameborder="0" allowfullscreen></iframe>');
-      BoxItUp(otherLinksDiv, box);
-      otherLinksInt++;
+      
+      IFrameElement otherLinksFrame = createExternalFrame(HttpTarget);
+      
+      BoxItUp(otherLinksFrame, box);
+      
 			
     }
     
@@ -60,6 +59,20 @@ void HandleLinksEvents(List links, List targets, box){
     });
     
   });
+}
+
+void createExternalFrame(String httpTarget){
+  int otherLinksInt = 0;
+
+  DivElement otherLinksFrame = new IFrameElement();
+  otherLinksFrame.className = 'otherTarget_${otherLinksInt}';
+  otherLinksFrame.src = '${httpTarget}';
+  otherLinksFrame.style.border = '0';
+  otherLinksFrame.style.width = '100%';
+  
+  return otherLinksFrame;
+  
+  otherLinksInt++;
 }
 
 
