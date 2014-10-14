@@ -1,0 +1,74 @@
+@import "animation.css";
+
+/*@group helpers */
+  
+.both {
+  clear: both;
+}
+  
+/*@end*/
+
+body {
+    margin: 0;
+    padding: 0;
+
+    background: #D9E2EC;
+    border-top: 3px solid #768FA8;
+
+    font-family: 'Arimo', sans-serif;
+}
+
+a {
+  color: #CA4179;
+  text-decoration: none;
+  margin: 5px;
+  display: block;
+  float: left;
+  clear: left;
+}
+
+main {
+  width: 80%;
+  max-width: 720px;
+  min-width: 700px;
+  display: block;
+  margin: 20px auto;
+  background: #fff;
+  padding: 10px;
+  border-radius: 6px;
+}
+
+h1 {
+    font-family: "Lobster";
+    text-align: center;
+    color: #768FA8;
+}
+
+h2 {
+    color: #4f5f6d;
+    font-size: 1em;
+    text-transform: uppercase;
+}
+
+p {
+  color: #768FA8;
+}
+
+/*.main-body {
+  background: #fff;
+  border-radius: 6px;
+  border: 1px solid #cdcbce;
+  color: #cdcbce;
+  padding: 20px;
+}*/
+
+.codeBlock {
+  background: #D9E2EC;
+  padding: 5px;
+  border-radius: 6px;
+  color: crimson;
+}
+
+hr {
+  border: 1px dashed #D9E2EC;
+}

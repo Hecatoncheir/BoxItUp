@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>BoxItUp Library</title>
+    <script src="app.dart" type="application/dart"></script>
+    <script src="packages/browser/dart.js"></script>
+    <link rel="stylesheet" href="app.css" />
+    <link href="//fonts.googleapis.com/css?family=Lobster:400" rel="stylesheet" type="text/css">
+</head>
+<body>
+
+<h1>BoxItUp Library</h1>
+
+<main>
+<pre class="codeBlock">
+import 'package:boxItUp/boxItUp.dart';
+</pre>
+  
+  <section class="main-body">
+  <hr />
+    <h2>Document Links</h2>
+    <a class="box" href="#main-box">Open Box!</a><br />
+    <p>code:
+<pre class="codeBlock">
+main(){
+  new Box('.box');
+}</pre>
+    </p>
+    <a class="boxNewAnimation" href="#two-box">Open second box!</a><br />
+<p>code:
+<pre class="codeBlock">
+main(){
+  new Box('.boxNewAnimation', animationOpen: 'rubberBand');
+}</pre>
+    </p>
+    
+    <!-- target -->
+    <div id="main-box">
+      <p>Box Open!</p>
+    </div>
+    
+    <!-- target -->
+    <div id="two-box">
+      <p>Box second Open!</p>
+    </div>
+    
+    <div class="both"></div>
+  </section>
+  
+  <section class="main-body">
+  <hr />
+    <h2>YouTube Video</h2>
+    <a class="box" type="external" href="http://www.youtube.com/embed/5KlnlCq2M5Q">YouTube link</a><br />
+<p>HTML code:
+<pre class="codeBlock">
+class="box" type="external" href="http://www.youtube.com/embed/5KlnlCq2M5Q">YouTube link
+</pre>
+    </p>
+    <div class="both"></div>
+  </section>
+
+</main>
+    
+</body>
+</html>
