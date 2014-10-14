@@ -1,8 +1,8 @@
-library boxItUp;
+library box_it_up;
 import 'dart:html';
 
 part 'box_elements_realization.dart';
-part 'boxItUp_frame.dart';
+part 'box_it_up_frame.dart';
 
 abstract class BoxElements {
   List ElementsBox;

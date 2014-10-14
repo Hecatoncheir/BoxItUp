@@ -1,4 +1,4 @@
-part of boxItUp;
+part of box_it_up;
 
 
 //Создание и добавление ссылки на стиль библиотеки в head
@@ -6,7 +6,7 @@ void _addStyleLink(){
 
   LinkElement styleLink = new LinkElement();
       styleLink.rel = 'stylesheet';
-      styleLink.href = 'packages/boxItUp/box.css';
+      styleLink.href = 'packages/box_it_up/box.css';
       
   querySelector('head').append(styleLink);
 }
