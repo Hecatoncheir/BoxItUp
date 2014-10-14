@@ -1,0 +1,33 @@
+@charset "UTF-8";
+
+@import "animation.css";
+
+.boxItUp-overlay {
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  background: #000;
+
+  cursor: pointer;
+  display: none;
+  opacity: 0.5;
+  position: fixed;
+}
+
+.boxIt {
+  top: 30%;
+  left: 30%;
+  right: 30%;
+
+  padding: 5px 10px;
+
+  background: #fff;
+
+  border-radius: 6px;
+  opacity: 0;
+  position: absolute;
+  
+  border: 4px solid #4a4a4a;
+}
